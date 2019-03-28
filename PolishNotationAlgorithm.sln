@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2026
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PolishNotationAlgorithm", "PolishNotationAlgorithm\PolishNotationAlgorithm.csproj", "{DA8251A2-031C-4FF9-AF58-307FB9306CA4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PolishNotationsTests", "PolishNotationsTests\PolishNotationsTests.csproj", "{283A7DEF-2DE4-4820-B93E-8D4F73213A15}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DA8251A2-031C-4FF9-AF58-307FB9306CA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA8251A2-031C-4FF9-AF58-307FB9306CA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA8251A2-031C-4FF9-AF58-307FB9306CA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA8251A2-031C-4FF9-AF58-307FB9306CA4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{283A7DEF-2DE4-4820-B93E-8D4F73213A15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{283A7DEF-2DE4-4820-B93E-8D4F73213A15}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{283A7DEF-2DE4-4820-B93E-8D4F73213A15}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{283A7DEF-2DE4-4820-B93E-8D4F73213A15}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {88F67F11-3AA8-4DA0-B433-381BED4455F7}
+	EndGlobalSection
+EndGlobal
