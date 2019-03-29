@@ -9,7 +9,7 @@ namespace PolishNotationAlgorithm
  public class Stack
     {
        
-           private double[] numbersArray = new double[0];
+            private double[] numbersArray = new double[0];
 
             public void Push(double number)
             {
@@ -25,10 +25,7 @@ namespace PolishNotationAlgorithm
             {
                 return 0;
             }
-            if (numbersArray.Length == 1)
-                return numbersArray[numbersArray.Length-1];
-
-           
+            
               double numberToBeReturned = numbersArray[numbersArray.Length - 1];
               Array.Resize(ref numbersArray, numbersArray.Length - 1);
 

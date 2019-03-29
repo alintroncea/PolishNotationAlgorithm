@@ -4,63 +4,62 @@ using System.Text;
 using Xunit;
 namespace PolishNotationAlgorithm
 {
-   public class MainTests
+   public class OperationTests
     {
-        Calculate calculate = new Calculate();
-        Stack stack = new Stack();
+        Operation operation = new Operation();
 
         //IsOperator Tests
         [Fact]
         public void ShouldReturnTrueIf_ItsAddOperator()
         {
             
-            Assert.True(Program.IsOperator("+"));
+            Assert.True(operation.IsOperator("+"));
         }
         [Fact]
         public void ShouldReturnTrueIf_ItsSubtractOperator()
         {
 
-            Assert.True(Program.IsOperator("-"));
+            Assert.True(operation.IsOperator("-"));
         }
         [Fact]
         public void ShouldReturnTrueIf_ItsMultiplyOperator()
         {
 
-            Assert.True(Program.IsOperator("*"));
+            Assert.True(operation.IsOperator("*"));
         }
         [Fact]
         public void ShouldReturnTrueIf_ItsDivideOperator()
         {
 
-            Assert.True(Program.IsOperator("/"));
+            Assert.True(operation.IsOperator("/"));
         }
         [Fact]
         public void ShouldReturnFalseIf_ItsNotAValidOperator()
         {
 
-            Assert.False(Program.IsOperator("!"));
+            Assert.False(operation.IsOperator("!"));
         }
-        //Result Tests
+        //Result Tests 
 
         [Fact]
         public void ShouldReturnSameNumberWhenExpressionIsOneNumberInLength()
         {
 
-            Assert.Equal(23, Program.Result("23",stack,calculate));
+            Assert.Equal(23, operation.Result("23"));
         }
 
         [Fact]
         public void ShouldCalculateTwoNumberExpression()
         {
 
-            Assert.Equal(5, Program.Result("+ 2 3", stack, calculate));
+            Assert.Equal(5, operation.Result("+ 2 3"));
         }
 
         [Fact]
         public void ShouldCalculateFiveNumbersExpression()
         {
 
-            Assert.Equal(17, Program.Result("- + * 2 3 * 5 4 9", stack, calculate));
+            Assert.Equal(17, operation.Result("- + * 2 3 * 5 4 9"));
         }
     }
 }

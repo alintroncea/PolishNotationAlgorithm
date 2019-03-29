@@ -6,14 +6,13 @@ using System.Threading.Tasks;
 
 namespace PolishNotationAlgorithm
 {
-   public class Calculate
+   public class Calculator
     {
-       
-       
-        public double GetResult(char op, double firstOperand, double secondOperand)
-        {
-            double result;
 
+        private double result;
+
+        public double GetResult(char op, double firstOperand, double secondOperand)
+        {            
             switch (op)
             {
                 case '+':

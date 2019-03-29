@@ -3,9 +3,9 @@ using Xunit;
 
 namespace PolishNotationAlgorithm
 {
-    public class CalculateTests
+    public class CalculatorTests
     {
-        Calculate calculate = new Calculate();
+        Calculator calculate = new Calculator();
         [Fact]
         public void ShouldReturnAddResult()
         {
