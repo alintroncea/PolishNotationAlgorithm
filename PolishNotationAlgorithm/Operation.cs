@@ -11,8 +11,16 @@ namespace PolishNotationAlgorithm
         private Stack stack = new Stack();
         private double result;
 
-        public double Calculator(char op, double firstOperand, double secondOperand)
+        private char op;
+        private double firstOperand;
+        private double secondOperand;
+
+        public void Calculator(char op, double firstOperand, double secondOperand)
         {
+            this.op = op;
+            this.firstOperand = firstOperand;
+            this.secondOperand = secondOperand;
+
             switch (op)
             {
                 case '+':
@@ -28,10 +36,11 @@ namespace PolishNotationAlgorithm
                     result = firstOperand / secondOperand;
                     break;
                 default:
-                    return 0;
+                    result = 0;
+                    break;
             }
 
-            return result;
+            stack.Push(result);
         }
 
         public double Result(string input)
@@ -53,8 +62,8 @@ namespace PolishNotationAlgorithm
                         double firstOperand = stack.Pull();
                         double secondOperand = stack.Pull();
 
-                        double operation = Calculator(Convert.ToChar(inputArray[i]), firstOperand, secondOperand);
-                        stack.Push(operation);
+                        Calculator(Convert.ToChar(inputArray[i]), firstOperand, secondOperand);
+                      
                     }
                 }
                 return stack.Pull();
@@ -65,8 +74,11 @@ namespace PolishNotationAlgorithm
             }
 
         }
+
+        private string input;
         public bool IsOperator(string input)
         {
+            this.input = input;
             if (Convert.ToChar(input) == '+' || Convert.ToChar(input) == '-' || Convert.ToChar(input) == '*' || Convert.ToChar(input) == '/')
             {
                 return true;
