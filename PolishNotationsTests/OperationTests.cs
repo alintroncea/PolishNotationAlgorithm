@@ -39,6 +39,34 @@ namespace PolishNotationAlgorithm
 
             Assert.False(operation.IsOperator("!"));
         }
+        
+        //Calculator Tests
+        [Fact]
+        public void ShouldReturnAddResult()
+        {
+            Assert.Equal(5, operation.Calculator('+', 2, 3));
+        }
+
+        [Fact]
+        public void ShouldReturnSubtractResult()
+        {
+            Assert.Equal(3, operation.Calculator('-', 6, 3));
+        }
+        [Fact]
+        public void ShouldReturnMultiplyResult()
+        {
+            Assert.Equal(4, operation.Calculator('*', 2, 2));
+        }
+        [Fact]
+        public void ShouldReturnDivideResult()
+        {
+            Assert.Equal(3.5, operation.Calculator('/', 7.0, 2));
+        }
+        [Fact]
+        public void ShouldReturn0WhenOperatorIsNotCorrect()
+        {
+            Assert.Equal(0, operation.Calculator('^', 7, 2));
+        }
         //Result Tests 
 
         [Fact]

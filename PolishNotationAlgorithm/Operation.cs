@@ -9,7 +9,30 @@ namespace PolishNotationAlgorithm
     public class Operation
     {
         private Stack stack = new Stack();
-        private Calculator calculate = new Calculator();
+        private double result;
+
+        public double Calculator(char op, double firstOperand, double secondOperand)
+        {
+            switch (op)
+            {
+                case '+':
+                    result = firstOperand + secondOperand;
+                    break;
+                case '-':
+                    result = firstOperand - secondOperand;
+                    break;
+                case '*':
+                    result = firstOperand * secondOperand;
+                    break;
+                case '/':
+                    result = firstOperand / secondOperand;
+                    break;
+                default:
+                    return 0;
+            }
+
+            return result;
+        }
 
         public double Result(string input)
         {
@@ -30,7 +53,7 @@ namespace PolishNotationAlgorithm
                         double firstOperand = stack.Pull();
                         double secondOperand = stack.Pull();
 
-                        double operation = calculate.GetResult(Convert.ToChar(inputArray[i]), firstOperand, secondOperand);
+                        double operation = Calculator(Convert.ToChar(inputArray[i]), firstOperand, secondOperand);
                         stack.Push(operation);
                     }
                 }
